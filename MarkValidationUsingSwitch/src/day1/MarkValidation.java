@@ -11,28 +11,35 @@ public class MarkValidation {
 		
 		public String Grade(int mark)
 		{
-			String ans;
-			switch(mark)
+			char a;
+			if(mark>90 && mark<=100)
+				a='A';
+			else if(mark>75 && mark<89)
+				a='B';
+			else if(mark>60 && mark<74)
+				a='C';
+			else
+				a='D';
+		
+		
+			switch(a)
 			{
-				case 100:case 99:case 98:case 97:case 96:case 95:case 94:case 93:case 92:case 91:
-					ans="Grade A";
-					break;
+				case 'A':
+						return "Grade A";
+						
+				case 'B':
+					return "Grade B";
+					
 				
-				case 90: case 89: case 88: case 87: case 86: case 85: case 84: case 83: case 82: case 81: case 80:
-				case 79: case 78: case 77: case 76:
-					ans="Grade B";
-					break;
-				
-				case 75: case 74: case 73: case 72: case 71: case 70: case 69: case 68: case 67: case 66: case 65:
-				case 64: case 63: case 62: case 61:
-					ans="Grade C";
-					break;
+				case 'C':
+					return "Grade C";
+					
 				
 				default:
-					ans="Grade D";
-					break;
+					return "Grade D";
+					
 			}
-			return ans;
+			
 		}
 		
 }	
